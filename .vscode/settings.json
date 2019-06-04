@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/env": true,
+        "**/migrations/*.ini": true,
+        "**/migrations/*.mako": true,
+        "**/migrations/env.py": true,
+        "**/migrations/README": true
+    },
+    "editor.rulers": [
+        150
+    ],
+    "python.pythonPath": "env\\Scripts\\python.exe"
+}
