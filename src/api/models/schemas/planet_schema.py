@@ -32,3 +32,12 @@ class PlanetSchema(ma.ModelSchema):
     class Meta:
         model = Planet
         exclude = ['creation_date']
+
+    def to_json(self, json):
+        return self.jsonify(json).json
+
+    def update_object(selff, newObject: Planet, planet: Planet):
+        planet.name = newObject.name
+        planet.terrain = newObject.terrain
+        planet.climate = newObject.climate
+        return planet

@@ -27,8 +27,14 @@ def config_db(app, db):
     return manager
 
 
+def register_routes(app):
+    from src.api.routes import register_blueprint
+    register_blueprint(app)
+
+
 app = create_app()
 ma = Marshmallow(app)
 db = SQLAlchemy(app)
 manager = config_db(app, db)
 create_tables()
+register_routes(app)

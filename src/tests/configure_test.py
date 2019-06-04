@@ -1,4 +1,4 @@
-from src.api import create_app, db
+from src.api import create_app, db, register_routes
 from src.api.models import tables as create_tables
 from config import TestConfig
 import pytest
@@ -11,6 +11,7 @@ def app():
         app.test_request_context().push()
 
         db.init_app(app)
+        register_routes(app)
 
         if config_class is TestConfig:
             db.drop_all()
