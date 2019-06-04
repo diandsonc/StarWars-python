@@ -44,6 +44,25 @@ Activate the virtual environment: `source env/Scripts/activate`
 export FLASK_APP=run.py
 export FLASK_ENV=development
 export FLASK_DEBUG=True
+export DATABASE_URL='sqlite:////production_starWars.db'
+export PRODUCTION=True
 
 flask run
 ```
+
+
+# Running tests      
+To run test, use: `pytest`
+
+
+# Migration
+```sh
+flask db init
+flask db migrate
+flask db upgrade
+flask db downgrade
+```
+
+To generate script `--sql`
+
+To define migrate target `--tag`
