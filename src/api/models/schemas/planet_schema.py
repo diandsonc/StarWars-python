@@ -1,6 +1,7 @@
 from src.api import ma
 from src.api.models.planet import Planet
-from marshmallow import fields, validate
+from src.api.services.swapi.api import get_total_films
+from marshmallow import fields, validate, post_dump
 
 
 class PlanetSchema(ma.ModelSchema):
@@ -32,6 +33,10 @@ class PlanetSchema(ma.ModelSchema):
     class Meta:
         model = Planet
         exclude = ['creation_date']
+
+    @post_dump
+    def set_value(self, data):
+        data['films'] = get_total_films(data['name'])
 
     def to_json(self, json):
         return self.jsonify(json).json

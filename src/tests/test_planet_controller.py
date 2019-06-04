@@ -59,6 +59,7 @@ def test_get_planet_by_id_return_json_with_filled_model(app):
     data = json.loads(response.data, object_hook=lambda d: SimpleNamespace(**d)).data
 
     assert 1 == data.id
+    assert 2 == data.films
     assert 'Alderaan' == data.name
     assert 'temperate' == data.climate
     assert 'grasslands, mountains' == data.terrain
