@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/diandsonc/StarWars-python.svg?branch=master)](https://travis-ci.com/diandsonc/StarWars-python)
+[![codecov](https://codecov.io/gh/diandsonc/StarWars-python/branch/master/graph/badge.svg)](https://codecov.io/gh/diandsonc/StarWars-python)
+
 # StarWars API   
 Nossos associados são aficionados por Star Wars e com isso, queremos criar um jogo com algumas informações da franquia.
 

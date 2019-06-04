@@ -1,0 +1,12 @@
+[run]
+source =
+    src/api/
+    src/tests/
+    
+[report]
+show_missing = True
+
+exclude_lines =
+    def __repr__
+    if os.getenv("PRODUCTION") == "True":
+        config_class = ProdConfig

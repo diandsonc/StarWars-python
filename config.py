@@ -29,4 +29,4 @@ class TestConfig(Config):
     ENV = 'test'
     TESTING = True
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:////tests_starWars.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///tests_starWars.db'
