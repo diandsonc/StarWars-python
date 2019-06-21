@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/diandsonc/StarWars-python/branch/master/graph/badge.svg)](https://codecov.io/gh/diandsonc/StarWars-python)
 
 # StarWars API   
-API que com dados dos planetas. 
+API simples de cadastro de planetas com integração com https://swapi.co/. 
 
 
 
